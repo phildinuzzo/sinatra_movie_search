@@ -1,0 +1,21 @@
+
+
+
+<p>
+
+<div class="row">
+<div class="span8 offset1">
+<h4>Results for: "<%= @query %>"</h4>
+
+<p>
+
+<ul>
+  
+<% @results["Search"].each do |result| %> 
+
+<li><p><a href="/home/detail/<%= result["imdbID"] %>&tomatoes=true"><%= result["Title"] %> (<%= result["Year"] %>)</a></li>
+
+
+<% end %>
+
+</div></div><p>

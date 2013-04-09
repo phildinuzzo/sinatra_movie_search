@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <title>MOVIE TIME</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div id="navbar" class="row">
+<div class="span7">
+Search for Movies: 
+<form action='/home/search' method='get'>
+  <input type='text' name='query'/>
+  <button class="btn btn-success" id="submit">SEARCH</button>
+</form>
+</div><div class="span5">
+<span id="title"><h3>PHIL'S MOVIE SEARCH</h3></span>
+
+<!--   <a href="/home" class="btn btn-info">Home</a> -->
+</div></div>
+
+<div>
+<%= yield %>  <!-- YIELD!!!!!!!!!!!!   -->
+</div>
+
+
+</body>
+</html>

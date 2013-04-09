@@ -1,0 +1,54 @@
+
+
+
+<div class="row"> 
+  <div class="span6 offset1"><p>
+    <h3><%= @results["Title"] %> (<%= @results["Year"] %>)</h3>
+    <p>
+    Release Date: <%= @results["Released"] %>
+    <p>
+    Genre: <%= @results["Genre"] %>
+    <p>
+    Rated: <%= @results["Rated"] %>
+    <p>
+    Runtime: <%= @results["Runtime"] %>
+    <p>
+    Directed by: <%= @results["Director"] %>
+    <p>
+    Starring: <%= @results["Actors"] %>
+    <p>
+    Written by: <%= @results["Writer"] %>
+    <p>
+    Plot Summary: <%= @results["Plot"] %>
+  </div>
+  <div class="image span5">
+    <img src="<%= @results["Poster"] %>"/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span5 offset1 ratings">
+      <p>      <h4>IMDB Rating: 
+<% if @results["imdbRating"] < "5" %> 
+        <div id ="bad"><%= @results["imdbRating"] %></div>
+<% elsif @results["imdbRating"] > "5" %>
+        <div id = "good"><%= @results["imdbRating"] %></div>
+<%end%>
+      </h4>
+  </div>
+  
+
+  <div class="span5 offset1 ratings">
+      <p>
+      <h4>Rotten Tomatoes: 
+<% if @results["tomatoMeter"] < "50%" %> 
+        <div id ="bad"><%= @results["tomatoMeter"] %>% Fresh</div>
+<% elsif @results["tomatoMeter"] > "50%" %>
+        <div id = "good"><%= @results["tomatoMeter"] %>% Fresh</div>
+<%end%>
+      </h4>
+  </div>
+</div>
+
+
+
